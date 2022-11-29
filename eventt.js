@@ -38,7 +38,7 @@ form.addEventListener("click", (e) => {
 });
  */
 
-const form = document.querySelector("form");
+/* const form = document.querySelector("form");
 const product = document.querySelector("#product");
 const quantity = document.querySelector("#qty");
 const list = document.querySelector("#list");
@@ -57,10 +57,4 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-function hello() {
-  for (let i = 0; i < 5; i++) {
-    console.log(i);
-  }
-}
-
-hello();
+ */
