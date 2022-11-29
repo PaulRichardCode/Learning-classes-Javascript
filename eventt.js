@@ -55,6 +55,17 @@ form.addEventListener("submit", (e) => {
 
     list.append(li);
   }
+});*/
+
+const input = document.querySelector("input");
+const h1s = document.querySelector("h1");
+
+input.addEventListener("input", (e) => {
+  h1s.innerText = `Welcome, ${input.value}`;
+  if (input.value === "") {
+    h1s.innerText = "Enter Your Username";
+  }
 });
 
- */
+//CHANGE EVENT WORKS WHEN YOU CLICK OUTSIDE THE INPUT BOX
+//INPUT EVENT Adds everytime you type or input a character on keyboard
