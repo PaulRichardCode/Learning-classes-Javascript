@@ -57,7 +57,7 @@ form.addEventListener("submit", (e) => {
   }
 });*/
 
-const input = document.querySelector("input");
+/* const input = document.querySelector("input");
 const h1s = document.querySelector("h1");
 
 input.addEventListener("input", (e) => {
@@ -65,7 +65,39 @@ input.addEventListener("input", (e) => {
   if (input.value === "") {
     h1s.innerText = "Enter Your Username";
   }
-});
+}); */
 
 //CHANGE EVENT WORKS WHEN YOU CLICK OUTSIDE THE INPUT BOX
 //INPUT EVENT Adds everytime you type or input a character on keyboard
+
+//************************
+//************************
+//************************
+
+const form = document.querySelector("form");
+const prod = document.querySelector("#product");
+const qty = document.querySelector("#qty");
+const lis = document.querySelectorAll("li");
+const list = document.querySelector("#list");
+
+for (let li of lis) {
+  li.addEventListener("click", () => {
+    li.remove();
+  });
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (prod === "" || qty === "") {
+    alert("Characters cant be empty");
+  } else {
+    const li = document.createElement("li");
+    li.innerText = `${qty.value} ${prod.value}`;
+
+    list.append(li);
+  }
+});
+
+list.addEventListener("click", (e) => {
+  e.target.remove();
+});
